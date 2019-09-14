@@ -78,5 +78,26 @@ class ViewController: UIViewController {
 
 ```
 
+## Options
+
+```Swift
+titleColor:UIColor?
+titleFont:UIFont?
+textColor:UIColor?
+textFont:UIFont?
+isBlurImage:Bool = true
+isAnimation:Bool = true
+backgroundStyle:KSliderBackgroundStyle? // .dark, .light
+blurStyle:KSliderBackgroundStyle? // .dark, .light
+backAction:Bool = false
+backButtonTitle:String?
+backButtonImage:UIImage?
+backButtonBackgroundColor:UIColor?
+backButtonColor:UIColor?
+backButtonTextColor:UIColor?
+backButtonFont:UIFont?
+backButtonSize:CGSize?
+```
+
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
