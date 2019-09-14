@@ -13,6 +13,7 @@
   <img alt="MIT Licance" src="https://img.shields.io/github/license/KenanAtmaca/KSliderCard"/>
   <img alt="Release" src="https://img.shields.io/github/v/tag/KenanAtmaca/KSliderCard"/>
   <img alt="Swift" src="https://img.shields.io/badge/Swift-5.0%2B-orange"/>
+  <img alt="Platform" src="https://img.shields.io/cocoapods/p/KSliderCard"/>
   <img alt="Twitter" src="https://img.shields.io/twitter/url/https/github.com/KenanAtmaca/KSliderCard?style=social"/>
 </p>
 
