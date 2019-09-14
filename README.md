@@ -34,7 +34,7 @@ platform :ios, '11.0'
 
 target 'ProjectName' do
   use_frameworks!
-  pod 'KSliderCard'
+  pod 'KSliderCard', :git => 'https://github.com/KenanAtmaca/KSliderCard'
 end
 ```
 
