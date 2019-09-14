@@ -9,6 +9,14 @@
 <img src="https://user-images.githubusercontent.com/16580898/64905425-e258ce80-d6e0-11e9-9f0a-361179edf5e2.gif" width="35%"/>
 </p>
 
+<p align="center">
+  <img alt="MIT Licance" src="https://img.shields.io/github/license/KenanAtmaca/KSliderCard"/>
+  <img alt="Pod" src="https://img.shields.io/cocoapods/p/KSliderCard"/>
+  <img alt="Release" src="https://img.shields.io/github/v/release/KenanAtmaca/KSliderCard"/>
+  <img alt="Swift" src="https://img.shields.io/badge/Swift-5.0%2B-orange"/>
+  <img alt="Twitter" src="https://img.shields.io/twitter/url/https/github.com/KenanAtmaca/KSliderCard?style=social"/>
+</p>
+
 ## Requirements
 
 - Xcode 9.0 +
