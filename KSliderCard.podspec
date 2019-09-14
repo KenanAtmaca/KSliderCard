@@ -17,6 +17,6 @@ s.ios.deployment_target = "11.0"
 
 s.source       = { :git => "https://github.com/KenanAtmaca/KSliderCard", :tag => "#{s.version}" }
 s.source_files  = "KSliderCard", "KSliderCard/**/*.{h,m,swift}"
-s.swift_version = '5.0'
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0'}
+s.swift_version = '4.2'
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2'}
 end
