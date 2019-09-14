@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6F1126232CE456007843E1 /* KSliderCardDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6F1125232CE456007843E1 /* KSliderCardDataProvider.swift */; };
 		8A77DACC232B919D00203E27 /* KSliderCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A77DACA232B919D00203E27 /* KSliderCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A77DAD8232BA08E00203E27 /* KSliderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A77DAD2232BA08E00203E27 /* KSliderCard.swift */; };
 		8A77DAD9232BA08E00203E27 /* KSliderCardOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A77DAD3232BA08E00203E27 /* KSliderCardOptions.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6F1125232CE456007843E1 /* KSliderCardDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSliderCardDataProvider.swift; sourceTree = "<group>"; };
 		8A77DAC7232B919D00203E27 /* KSliderCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KSliderCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A77DACA232B919D00203E27 /* KSliderCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSliderCard.h; sourceTree = "<group>"; };
 		8A77DACB232B919D00203E27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				8A77DAD6232BA08E00203E27 /* KSliderCardBackgroundView.swift */,
 				8A77DAD7232BA08E00203E27 /* KSliderCardItem.swift */,
 				8A77DAD3232BA08E00203E27 /* KSliderCardOptions.swift */,
+				8A6F1125232CE456007843E1 /* KSliderCardDataProvider.swift */,
 				8A77DAD4232BA08E00203E27 /* KSliderCardView.swift */,
 				8A77DAD5232BA08E00203E27 /* NotificationName+.swift */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6F1126232CE456007843E1 /* KSliderCardDataProvider.swift in Sources */,
 				8A77DAD8232BA08E00203E27 /* KSliderCard.swift in Sources */,
 				8A77DADC232BA08E00203E27 /* KSliderCardBackgroundView.swift in Sources */,
 				8A77DADB232BA08E00203E27 /* NotificationName+.swift in Sources */,

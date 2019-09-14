@@ -33,7 +33,7 @@ class KSliderCardView: UIView {
        return label
     }()
     
-    private var subTitleTextView:UITextView = {
+    private var commentTextView:UITextView = {
        let label = UITextView()
        label.backgroundColor = .clear
        label.isEditable = false
@@ -65,6 +65,7 @@ class KSliderCardView: UIView {
     private var viewIndex:Int = 0
     
     var options = KSliderCardOptions()
+    var data = KSliderCardDataProvider()
     
     func setup(index: Int) -> UIView {
         self.viewIndex = index
@@ -108,7 +109,7 @@ class KSliderCardView: UIView {
         labelsStack.axis = .vertical
         labelsStack.spacing = 10
         labelsStack.addArrangedSubview(titleLabel)
-        labelsStack.addArrangedSubview(subTitleTextView)
+        labelsStack.addArrangedSubview(commentTextView)
         
         labelsStack.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 30).isActive = true
         labelsStack.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 10).isActive = true
@@ -127,15 +128,15 @@ class KSliderCardView: UIView {
     }
     
     private func setupElementsUI() {
-        if options.items.count > 0 {
-            contentImageView.image = options.items[viewIndex].image
-            titleLabel.text = options.items[viewIndex].title
-            subTitleTextView.text = options.items[viewIndex].subTitle
+        if data.items.count > 0 {
+            contentImageView.image = data.items[viewIndex].image
+            titleLabel.text = data.items[viewIndex].title
+            commentTextView.text = data.items[viewIndex].text
         }
         titleLabel.font = options.titleFont ?? UIFont(name: "Futura-Bold", size: 30)
-        subTitleTextView.font = options.subTitleFont ?? UIFont(name: "Avenir-Medium", size: 17)
+        commentTextView.font = options.textFont ?? UIFont(name: "Avenir-Medium", size: 17)
         titleLabel.textColor = options.titleColor ?? .white
-        subTitleTextView.textColor = options.subTitleColor ?? .white
+        commentTextView.textColor = options.textColor ?? .white
         backButton.addTarget(self, action: #selector(tapBackButtonAction), for: .touchUpInside)
         backButton.titleLabel?.font = options.backButtonFont ?? UIFont(name: "Avenir-Medium", size: 17)
         backButton.setTitle(options.backButtonTitle ?? "BACK", for: .normal)
@@ -195,10 +196,10 @@ class KSliderCardView: UIView {
     }
     
     private func removeCard() {
-        guard self.options.cardsStack.indices.contains(self.viewIndex) else { return }
-        let cardView = self.options.cardsStack[self.viewIndex]
+        guard self.data.cardsStack.indices.contains(self.viewIndex) else { return }
+        let cardView = self.data.cardsStack[self.viewIndex]
         self.removeFromSuperview()
-        if options.cardsStack.count > 1 {
+        if data.cardsStack.count > 1 {
             if options.isAnimation {
                 UIView.animate(withDuration: 0.5, animations: {
                     cardView.transform = CGAffineTransform.init(scaleX: 1.01, y: 1.01)
@@ -208,9 +209,9 @@ class KSliderCardView: UIView {
                     })
                 }
             }
-            self.options.cardsStack.remove(at: self.viewIndex)
+            self.data.cardsStack.remove(at: self.viewIndex)
         } else {
-            self.options.cardsStack.remove(at: self.viewIndex)
+            self.data.cardsStack.remove(at: self.viewIndex)
             NotificationCenter.default.post(name: Notification.Name.removeBackground, object: nil)
         }
     }
@@ -245,7 +246,7 @@ class KSliderCardView: UIView {
                 if self.options.isBlurImage { self.blurView.layer.cornerRadius = 15 }
                 self.layoutIfNeeded()
             }) { (_) in
-                self.subTitleTextView.setContentOffset(.zero, animated: false)
+                self.commentTextView.setContentOffset(.zero, animated: false)
             }
         }
     }

@@ -13,13 +13,10 @@ public enum KSliderBackgroundStyle {
 
 public class KSliderCardOptions {
     
-    var cardsStack:[KSliderCardView] = []
-    public var items:[KSliderCardItem] = []
-    
     public var titleColor:UIColor?
-    public var subTitleColor:UIColor?
     public var titleFont:UIFont?
-    public var subTitleFont:UIFont?
+    public var textColor:UIColor?
+    public var textFont:UIFont?
     public var isBlurImage:Bool = true
     public var isAnimation:Bool = true
     public var backgroundStyle:KSliderBackgroundStyle?

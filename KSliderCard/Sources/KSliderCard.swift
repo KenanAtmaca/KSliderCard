@@ -9,6 +9,7 @@ open class KSliderCard {
     
     private var backgroundView = KSliderCardBackgroundView()
     private var tmpCards:[KSliderCardView] = []
+    private var data = KSliderCardDataProvider()
     private var rootView:UIView!
     
     public var options = KSliderCardOptions()
@@ -17,24 +18,31 @@ open class KSliderCard {
         setupObservers()
     }
     
+    public convenience init (items: [KSliderCardItem]) {
+        self.init()
+        data.items = items
+    }
+    
     public func show(to view: UIView) {
         self.rootView = view
         backgroundView.style = options.backgroundStyle
         view.addSubview(backgroundView.setup())
-        options.items = options.items.reversed()
+        data.items = data.items.reversed()
         
-        if options.items.count > 1 {
-            (0..<options.items.count).forEach { (index) in
+        if data.items.count > 1 {
+            (0..<data.items.count).forEach { (index) in
                 let item = KSliderCardView()
                 item.options = options
-                options.cardsStack.append(item)
+                item.data = data
+                data.cardsStack.append(item)
                 view.addSubview(item.setup(index: index))
             }
-            tmpCards = options.cardsStack
+            tmpCards = data.cardsStack
         } else {
            let singleItem = KSliderCardView()
            singleItem.options = options
-           options.cardsStack.append(singleItem)
+           singleItem.data = data
+           data.cardsStack.append(singleItem)
            view.addSubview(singleItem.setup(index: 0))
         }
     }
@@ -44,9 +52,9 @@ open class KSliderCard {
     }
     
     @objc private func backCard() {
-        if options.cardsStack.count != tmpCards.count {
-            options.cardsStack.append(tmpCards[options.cardsStack.count])
-            if let lastView = options.cardsStack.last {
+        if data.cardsStack.count != tmpCards.count {
+            data.cardsStack.append(tmpCards[data.cardsStack.count])
+            if let lastView = data.cardsStack.last {
                 rootView.addSubview(lastView)
                 lastView.alpha = 0
                 UIView.animate(withDuration: 0.5) {

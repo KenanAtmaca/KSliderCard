@@ -8,11 +8,11 @@ import UIKit
 public struct KSliderCardItem {
     public var image:UIImage?
     public var title:String?
-    public var subTitle:String?
+    public var text:String?
     
-    public init(image:UIImage?, title:String?, subTitle:String?) {
+    public init(image:UIImage?, title:String?, text:String?) {
         self.image = image
         self.title = title
-        self.subTitle = subTitle
+        self.text = text
     }
 }
