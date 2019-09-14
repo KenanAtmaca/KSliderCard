@@ -2,9 +2,9 @@ Pod::Spec.new do |s|
 
 s.name         = "KSliderCard"
 s.version      = "1.0"
-s.summary      = "Basic, animatable iOS slider card 🃏"
+s.summary      = "Basic, animatable iOS slider card"
 s.description  = <<-DESC
-Basic, animatable iOS slider card 🃏
+Basic, animatable iOS slider card
 DESC
 s.homepage     = "https://github.com/KenanAtmaca/KSliderCard"
 s.license      = { :type => "MIT", :file => "LICENSE" }
